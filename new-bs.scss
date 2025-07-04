@@ -61,20 +61,11 @@ $new-theme-colors: (
   "epicode-3": #cb2376
 );
 
-// Ricrea completamente $theme-colors con merge personalizzato
+// Mergio
 $theme-colors: map-merge(
-  (
-    "primary": #0d6efd,
-    "secondary": #6c757d,
-    "success": #198754,
-    "info": #0dcaf0,
-    "warning": #ffc107,
-    "danger": #dc3545,
-    "light": #f8f9fa,
-    "dark": #212529
-  ),
-  $new-theme-colors
+  $theme-colors, $new-theme-colors
 );
+
 
 $grid-breakpoints: map-merge($grid-breakpoints  , $new-grid:( 3xl: 1600px,
   4xl: 1800px) );
